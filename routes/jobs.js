@@ -16,7 +16,7 @@ const {
 // Routes
 
 router.route("/").post(testUser, createJob).get(getAllJobs);
-router.route("/stats", showStats);
+router.route("/stats").get(showStats);
 
 router
   .route("/:id")
