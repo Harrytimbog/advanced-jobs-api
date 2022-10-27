@@ -10,11 +10,13 @@ const {
   getAllJobs,
   updateJob,
   getJob,
+  showStats,
 } = require("../controllers/jobs");
 
 // Routes
 
 router.route("/").post(testUser, createJob).get(getAllJobs);
+router.route("/stats", showStats);
 
 router
   .route("/:id")
